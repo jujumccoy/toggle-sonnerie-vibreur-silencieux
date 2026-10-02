@@ -1,0 +1,22 @@
+NOTCH SON - bouton flottant pres de la camera du S24+
+Un tap = Sonnerie (vert) -> Vibreur (orange) -> Silencieux (rouge) -> Sonnerie...
+
+COMMENT OBTENIR L'APK (methode sans rien installer, via GitHub, gratuit)
+1. Cree un compte sur github.com (gratuit).
+2. Clique sur "+" > "New repository", nom : notchson, puis "Create repository".
+3. Clique sur "uploading an existing file", glisse TOUT le contenu de ce dossier
+   (y compris le dossier cache .github), puis "Commit changes".
+   Si .github n'est pas pris : "Add file" > "Create new file", tape
+   .github/workflows/build.yml et colle le contenu du fichier du meme nom.
+4. Onglet "Actions" : attends ~5 min que "Build APK" passe au vert.
+5. Clique sur le build > en bas "Artifacts" > NotchSon-apk : telecharge le zip, dezippe : app-debug.apk.
+
+INSTALLATION SUR LE S24+
+1. Ouvre l'apk (autorise "installer des apps inconnues" si demande).
+2. Ouvre Notch Son : fais les boutons 1, 2, 3 dans l'ordre, puis DEMARRER.
+3. Reglages > Batterie > Notch Son : "Sans restriction" (sinon Android peut le couper).
+
+REGLER LA POSITION : fichier NotchService.kt, section "REGLAGES" tout en haut
+(tailleDp, decalageXDp, decalageYDp), puis recompiler.
+
+LIMITES : le bouton ne s'affiche pas sur l'ecran verrouille ni dans certains jeux/videos plein ecran.
